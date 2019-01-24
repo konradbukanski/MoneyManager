@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Money manager</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <style>
         body{
             background-color: brown;
+            font-family: 'Roboto', sans-serif;
         }
         .title{
             color: white;
@@ -15,28 +18,90 @@
             left: 20px;
             top:20px;
             font-size: 40px;
+            text-transform: uppercase;
+            /* font-weight: bold; */
+            font-family: 'Righteous', cursive;
         }
         .box{
             position: absolute;
             left: 50%;
-            top:50%;
-            transform: translate(-50%,-50%);
+            top:150px;
+            transform: translateX(-50%);
             display: flex;
+            justify-content:space-between;
         }
+        @media only screen and (max-width: 1024px) {
+        .box {
+            flex-direction: column;
+            
+        }
+}
         .inputs{
-            background-color: aliceblue;
+            background-color: rgba(240, 248, 255, 0.404);
             /* text-align: center; */
-            padding: 10px;
+            padding: 40px 80px;
             border-radius: 5px;
             margin-right: 50px;
+            min-width: 400px;
         }
+        
         .total{
-            background-color: aliceblue;
-            padding: 10px;
+            background-color: rgba(240, 248, 255, 0.404);
+            padding: 80px;
             border-radius: 5px;
+            min-width: 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        @media  (max-width: 1024px) {
+        .inputs, .total {
+            width: 80%;
+            margin-bottom: 50px;
+            
+        }
+        }
+        .total p{
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .newExpens{
+            margin-left: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgba(10, 10, 10, 0.507);
+            color: white;
+            border: 0;
+            transition: .2s;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .newExpensText{
+            width: 130px;
+        }
+        .calculate{
+            display: block;
+            padding: 20px 0px;
+            font-size: 30px;
+            margin-top: 50px;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 5px;
+            background-color: rgba(10, 10, 10, 0.507);
+            color: white;
+            border: 0;
+            transition: .2s;
+            cursor: pointer;
+            font-family: 'Righteous', cursive;
+        }
+        .calculate:hover{
+            background-color: rgba(26, 77, 78, 0.575);
         }
         h1{
             font-size: 20px;
+            text-transform: uppercase;
+            margin: 30px 0;
         }
         input{
             width: 70px;
@@ -44,6 +109,7 @@
             border-radius: 5px;
             margin-left: 5px;
             text-align: center;
+            display: inline-block;
             
         }
     </style>
@@ -58,12 +124,12 @@
             </div>
             <div class="expenses">
                 <h1>Ile miesięcznie wydajesz?</h1>
-                <p>Czynsz<input type="number" value="0" min="0">zł</p>
-                <p>Opłaty abonamentowe<input type="number" value="0" min="0"> zł</p>
-                <p>Raty<input type="number" value="0" min="0"> zł</p>
-                <p>Jedzenie<input type="number" value="0" min="0"> zł</p>                
+                <p><input type="number" value="0" min="0">zł - Czynsz</p>
+                <p><input type="number" value="0" min="0"> zł - Opłaty abonamentowe</p>
+                <p><input type="number" value="0" min="0"> zł - Raty</p>
+                <p><input type="number" value="0" min="0"> zł - Jedzenie</p>                
             </div>
-            <input class="newExpensText"><button class="newExpens">Dodaj nowy</button>
+            <input placeholder="nazwa" class="newExpensText"><button class="newExpens">Dodaj</button>
             <div class="safings">
                     <h1>Ile miesięcznie chcesz oszczędzić?</h1>
                     <input type="number" value="0" min="0"> zł
