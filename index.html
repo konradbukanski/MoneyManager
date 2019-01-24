@@ -18,6 +18,12 @@
             color: rgba(255, 255, 255, 0.815);
             /* font-weight: bold; */
         }
+        @media only screen and (max-width: 1024px) {
+        body  {
+            overflow: auto;
+            
+        }
+        }
         #wave {
             position: relative;
             height: 130vh;
@@ -27,34 +33,18 @@
             border-radius: 100% 15%;
             transform: rotate(-20deg);
             }
-            /* #wave:before {
-            content: "";
-            display: block;
-            position: absolute;
+        @media only screen and (max-width: 1024px) {
+            #wave  {
+                display: none;
             
-            width: 55%;
-            height: 350px;
-            background-color: white;
-            right: -5px;
-            top: 40px;
-            }
-            #wave:after {
-            content: "";
-            display: block;
-            position: absolute;
-            border-radius: 100% 50%;
-            width: 50%;
-            height: 300px;
-            background-color: #ffffff;
-            left: -10px;
-            top: 270px;
-            } */
+        }
+        }
         .title{
             color: white;
             position: absolute;
             left: 60px;
             top:60px;
-            font-size: 40px;
+            font-size: 43px;
             /* text-transform: uppercase; */
             font-weight: 100;
             font-family: 'Righteous', cursive;
@@ -71,7 +61,8 @@
         .box {
             flex-direction: column;
             left: 10%;
-            width: 100%;
+            width: 80%;
+            top:200px;
             transform: translateX(0);
             
         }
@@ -128,7 +119,7 @@
             font-family: 'Righteous', cursive;
         }
         .newExpensText{
-            width: 130px;
+            width: 110px;
         }
         .calculate{
             display: block;
@@ -161,7 +152,8 @@
             margin-left: 5px;
             text-align: center;
             display: inline-block;
-            
+            background-color: rgba(255, 255, 255, 0.815);
+            border: 0;            
         }
         .input{
             overflow-y: scroll;
@@ -171,6 +163,7 @@
         @media  (max-width: 1024px) {
         .input{
             width: 100%;
+            height: 610px;
         }
         }
         /* width */

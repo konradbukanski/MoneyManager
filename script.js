@@ -22,12 +22,12 @@ document.querySelector('.calculate').addEventListener("click", (e) => {
 
     if(mouth<0){
         document.querySelector(".mouth h1").innerHTML = "W tym miesiącu na minusie"; 
-        document.querySelector(".mouth p").innerHTML = `${mouth*(-1)} zł`;
+        document.querySelector(".mouth p").innerHTML = `${mouth*(-1).toFixed(2)} zł`;
         document.querySelector(".day h1").innerHTML = "każdego dnia brakuje";
         document.querySelector(".day p").innerHTML = `${(day*(-1)).toFixed(2)} zł`;
     }else{
         document.querySelector(".mouth h1").innerHTML = "Możesz wydać w tym miesiącu:"; 
-        document.querySelector(".mouth p").innerHTML = `${mouth} zł`;
+        document.querySelector(".mouth p").innerHTML = `${mouth.toFixed(2)} zł`;
         document.querySelector(".day h1").innerHTML = "Na dzień przypada:";
         document.querySelector(".day p").innerHTML = `${day.toFixed(2)} zł`;
     }
