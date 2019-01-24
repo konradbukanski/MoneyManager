@@ -5,21 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Money manager</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Righteous" rel="stylesheet">
     <style>
-        body{
-            background-color: brown;
-            font-family: 'Roboto', sans-serif;
+        .{
+            margin: 0;
+            padding: 0;
         }
+        body{
+            overflow: hidden;
+            background-color: #00123a;
+            font-family: 'Open Sans', sans-serif;
+            color: rgba(255, 255, 255, 0.815);
+            /* font-weight: bold; */
+        }
+        #wave {
+            position: relative;
+            height: 130vh;
+            width: 150vW;
+            background: #ffffff5e;
+            left: -20%;
+            border-radius: 100% 15%;
+            transform: rotate(-20deg);
+            }
+            /* #wave:before {
+            content: "";
+            display: block;
+            position: absolute;
+            
+            width: 55%;
+            height: 350px;
+            background-color: white;
+            right: -5px;
+            top: 40px;
+            }
+            #wave:after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 50%;
+            height: 300px;
+            background-color: #ffffff;
+            left: -10px;
+            top: 270px;
+            } */
         .title{
             color: white;
             position: absolute;
-            left: 20px;
-            top:20px;
+            left: 60px;
+            top:60px;
             font-size: 40px;
-            text-transform: uppercase;
-            /* font-weight: bold; */
+            /* text-transform: uppercase; */
+            font-weight: 100;
             font-family: 'Righteous', cursive;
         }
         .box{
@@ -33,33 +70,45 @@
         @media only screen and (max-width: 1024px) {
         .box {
             flex-direction: column;
+            left: 10%;
+            width: 100%;
+            transform: translateX(0);
             
         }
-}
+        }
+        .inputs,.total{
+            background-color: #202f50;
+            border-radius: 5px;
+            z-index: 2;
+        }
         .inputs{
-            background-color: rgba(240, 248, 255, 0.404);
+            
             /* text-align: center; */
             padding: 40px 80px;
-            border-radius: 5px;
             margin-right: 50px;
-            min-width: 400px;
+            width: 600px;
+            box-sizing: border-box;
+            /* overflow-y: scroll; */
+            text-transform: uppercase;
+            color: rgb(200, 204, 207);
         }
         
         .total{
-            background-color: rgba(240, 248, 255, 0.404);
             padding: 80px;
-            border-radius: 5px;
-            min-width: 300px;
+            width: 400px;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            box-sizing: border-box;
         }
         @media  (max-width: 1024px) {
         .inputs, .total {
-            width: 80%;
+            width: 100%;
             margin-bottom: 50px;
-            
+            box-sizing: border-box;
+            margin-right: 0px;
+            padding: 10px;
         }
         }
         .total p{
@@ -96,7 +145,8 @@
             font-family: 'Righteous', cursive;
         }
         .calculate:hover{
-            background-color: rgba(26, 77, 78, 0.575);
+            background-color: rgba(255, 255, 255, 0.815);
+            color: black;
         }
         h1{
             font-size: 20px;
@@ -112,19 +162,43 @@
             display: inline-block;
             
         }
+        .input{
+            overflow-y: scroll;
+            height: 500px;
+            width: 110%;
+        }
+        @media  (max-width: 1024px) {
+        .input{
+            width: 100%;
+        }
+        }
+        /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f13a; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
     </style>
 </head>
 <body>
+    <div id="wave"></div>
     <span class="title">Money manager</span>
     <div class="box">
         <div class="inputs">
-            <div class="salary">
+            <div class="input">
+                <div class="salary">
                 <h1>Ile dochodu masz miesięcznie?</h1>
                 <input type="number" value="0" min="0"> zł
             </div>
             <div class="expenses">
                 <h1>Ile miesięcznie wydajesz?</h1>
-                <p><input type="number" value="0" min="0">zł - Czynsz</p>
+                <p><input type="number" value="0" min="0"> zł - Czynsz</p>
                 <p><input type="number" value="0" min="0"> zł - Opłaty abonamentowe</p>
                 <p><input type="number" value="0" min="0"> zł - Raty</p>
                 <p><input type="number" value="0" min="0"> zł - Jedzenie</p>                
@@ -134,6 +208,7 @@
                     <h1>Ile miesięcznie chcesz oszczędzić?</h1>
                     <input type="number" value="0" min="0"> zł
             </div>
+        </div>
             <button class="calculate">Oblicz</button>
             
         </div>
