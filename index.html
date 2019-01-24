@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Money manager</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        .title{
+            color: white;
+            position: absolute;
+            left: 20px;
+            top:20px;
+            font-size: 40px;
+        }
+        .box{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+        }
+        .inputs{
+            background-color: aliceblue;
+            /* text-align: center; */
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 50px;
+        }
+        .total{
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h1{
+            font-size: 20px;
+        }
+        input{
+            width: 70px;
+            border: 2px solid #115555123;
+            border-radius: 5px;
+            margin-left: 5px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <span class="title">Money manager</span>
+    <div class="box">
+        <div class="inputs">
+            <div class="salary">
+                <h1>Ile dochodu masz miesięcznie?</h1>
+                <input type="number" value="0" min="0"> zł
+            </div>
+            <div class="expenses">
+                <h1>Ile miesięcznie wydajesz?</h1>
+                <p>Czynsz<input type="number" value="0" min="0">zł</p>
+                <p>Opłaty abonamentowe<input type="number" value="0" min="0"> zł</p>
+                <p>Raty<input type="number" value="0" min="0"> zł</p>
+                <p>Jedzenie<input type="number" value="0" min="0"> zł</p>                
+            </div>
+            <input class="newExpensText"><button class="newExpens">Dodaj nowy</button>
+            <div class="safings">
+                    <h1>Ile miesięcznie chcesz oszczędzić?</h1>
+                    <input type="number" value="0" min="0"> zł
+            </div>
+            <button class="calculate">Oblicz</button>
+            
+        </div>
+        <div class="total">
+                <div class="mouth">
+                    <h1>Możesz wydać w tym miesiącu:</h1>
+                    <p>0</p>
+                </div>
+                <dvi class="day">
+                    <h1>Na dzień przypada:</h1>
+                    <p>0</p>
+                </dvi>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>     
