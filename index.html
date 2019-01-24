@@ -107,6 +107,10 @@
             font-weight: bold;
         }
         .newExpens{
+            color: red;
+            font-weight: bold;
+        }
+        .newExpensBtn{
             margin-left: 20px;
             padding: 8px 20px;
             border-radius: 5px;
@@ -197,7 +201,11 @@
                 <p><input type="number" value="0" min="0"> zł - Raty</p>
                 <p><input type="number" value="0" min="0"> zł - Jedzenie</p>                
             </div>
-            <input placeholder="nazwa" class="newExpensText"><button class="newExpens">Dodaj</button>
+            <div class="newExpens">
+                <input placeholder="nazwa" class="newExpensText">
+                <button class="newExpensBtn">Dodaj</button>
+                <span></span>
+            </div>
             <div class="safings">
                     <h1>Ile miesięcznie chcesz oszczędzić?</h1>
                     <input type="number" value="0" min="0"> zł

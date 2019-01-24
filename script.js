@@ -34,7 +34,9 @@ document.querySelector('.calculate').addEventListener("click", (e) => {
 
 })
 
-document.querySelector('.newExpens').addEventListener("click", (e) => {
+document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
+    document.querySelector(".newExpens span").innerHTML = ``;
+    if(document.querySelector('.newExpensText').value){
     const newExpens = document.createElement("p")
     const newExpensInput = document.createElement("INPUT");
     newExpensInput.setAttribute("type", "number");
@@ -46,4 +48,7 @@ document.querySelector('.newExpens').addEventListener("click", (e) => {
     newExpensText.innerHTML = ` zł - ${document.querySelector('.newExpensText').value}`;
     newExpens.appendChild(newExpensText);
     document.querySelector('.newExpensText').value ="";
+    }else{
+        document.querySelector(".newExpens span").innerHTML = `  WPROWADŹ NAZWĘ!`;
+    }
 })
