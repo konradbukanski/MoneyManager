@@ -43,7 +43,7 @@ document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
     newExpensInput.setAttribute("value", "0");
     newExpensInput.setAttribute("min", "0");
     newExpens.appendChild(newExpensInput);
-    document.querySelector(".expenses").appendChild(newExpens);
+    document.querySelector(".expensesList").appendChild(newExpens);
     const newExpensText = document.createElement("span");
     newExpensText.innerHTML = ` zł - ${document.querySelector('.newExpensText').value}`;
     newExpens.appendChild(newExpensText);
@@ -52,27 +52,30 @@ document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
     x.innerHTML = ` x`;
     newExpens.appendChild(x);
     document.querySelector('.newExpensText').value ="";
+    listItemschange()
+
+
+    
     }else{
         document.querySelector(".newExpens span").innerHTML = `  WPROWADŹ NAZWĘ!`;
     }
+    listItems = document.querySelectorAll('.delateElement');
+    
 })
 
 
-let listItems = document.querySelectorAll('.delateElement');
 
-// for (var i = 0; i < listItems.length; i++) {
-//     listItems[i].addEventListener("click", () => {console.log(this)})
-//   }
+let listItems =  document.querySelectorAll('.delateElement');
+
+const listItemschange = () => {
+
+        listItems =  document.querySelectorAll('.delateElement');
+        document.querySelectorAll('.delateElement').forEach(item => { item.addEventListener("click", function(){
+            item.closest("p").parentNode.removeChild(item.closest("p"));
+            })
+        })
+
+}
+listItemschange()
 
 
-//   listItems.forEach( (item, index) => {
-//         item.addEventListener("click", function(){
-//         // this.parentNode.removeChild(this);
-//         console.log(item.closest("p"))
-//     })})
-       
-
-listItems.forEach(item => { item.addEventListener("click", function(){
-    item.closest("p").parentNode.removeChild(item.closest("p"));
-    })
-})
