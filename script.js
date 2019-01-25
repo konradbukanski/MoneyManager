@@ -48,10 +48,14 @@ document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
     const newExpensText = document.createElement("span");
     newExpensText.innerHTML = ` zł - ${document.querySelector('.newExpensText').value}`;
     newExpens.appendChild(newExpensText);
-    const x = document.createElement("span");
-    x.classList.add("delateElement");
-    x.innerHTML = ` x`;
-    newExpens.appendChild(x);
+    const delateElement = document.createElement("span");
+    delateElement.classList.add("delateElement");
+    const x = document.createElement("i");
+    x.classList.add("far");
+    x.classList.add("fa-times-circle");
+    delateElement.appendChild(x);
+    newExpens.appendChild(delateElement);
+
     document.querySelector('.newExpensText').value ="";
     listItemschange()  
     }else

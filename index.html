@@ -230,26 +230,16 @@
   border-radius: 10px;
 }
 .delateElement{
-    position: absolute;
     font-weight: bold;
     opacity: 0.3;
     /* color: red; */
     cursor: pointer;
     transition: .3s;
-    border: 2px solid rgba(255, 255, 255, 0.815);;
-    border-radius: 50%;
-    text-align: center;
-    padding: 3px;
     margin-left: 10px;
-    font-size: 10px;
-    line-height: 10px;
-    width: 10px;
-    height: 10px;
 }
 
 .expensesListText:hover + .delateElement, .delateElement:hover{
     opacity: 1;
-    border: 2px solid red;
     color: red;
 }
 .expensesListText{
@@ -271,10 +261,10 @@
                     <h1>Ile miesięcznie wydajesz?</h1>
                 <div class="expensesList">
                 
-                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Czynsz</span><span class="delateElement">x</span></p>
-                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Opłaty abonamentowe </span><span class="delateElement">x</span></p>
-                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Raty</span><span class="delateElement">x</span></p>
-                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Jedzenie</span><span class="delateElement">x</span></p>   
+                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Czynsz</span><span class="delateElement"><i class="far fa-times-circle"></i></span></p>
+                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Opłaty abonamentowe </span><span class="delateElement"><i class="far fa-times-circle"></i></span></p>
+                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Raty</span><span class="delateElement"><i class="far fa-times-circle"></i></span></p>
+                <p><input type="number" placeholder="0" min="0"> <span class="expensesListText"> zł - Jedzenie</span><span class="delateElement"><i class="far fa-times-circle"></i></span></p>   
             </div>             
             </div>
             <div class="newExpens">
