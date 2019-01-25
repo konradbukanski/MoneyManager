@@ -106,7 +106,7 @@
             font-size: 26px;
             font-weight: bold;
         }
-        .newExpens{
+        .newExpens span{
             color: red;
             font-weight: bold;
         }
@@ -124,6 +124,7 @@
         }
         .newExpensText{
             width: 110px;
+            height: 20px;
         }
         .calculate{
             display: block;
@@ -181,6 +182,9 @@
   cursor: pointer;
   border-radius: 10px;
 }
+.delateElement{
+    color: red;
+}
 
     </style>
 </head>
@@ -195,11 +199,14 @@
                 <input type="number" value="0" min="0"> zł
             </div>
             <div class="expenses">
-                <h1>Ile miesięcznie wydajesz?</h1>
-                <p><input type="number" value="0" min="0"> zł - Czynsz</p>
-                <p><input type="number" value="0" min="0"> zł - Opłaty abonamentowe</p>
-                <p><input type="number" value="0" min="0"> zł - Raty</p>
-                <p><input type="number" value="0" min="0"> zł - Jedzenie</p>                
+                    <h1>Ile miesięcznie wydajesz?</h1>
+                <div class="expensesList">
+                
+                <p><input type="number" value="0" min="0"> <span> zł - Czynsz</span><span class="delateElement">x</span></p>
+                <p><input type="number" value="0" min="0"> <span> zł - Opłaty abonamentowe </span><span class="delateElement">x</span></p>
+                <p><input type="number" value="0" min="0"> <span> zł - Raty</span><span class="delateElement">x</span></p>
+                <p><input type="number" value="0" min="0"> <span> zł - Jedzenie</span><span class="delateElement">x</span></p>   
+            </div>             
             </div>
             <div class="newExpens">
                 <input placeholder="nazwa" class="newExpensText">

@@ -47,8 +47,32 @@ document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
     const newExpensText = document.createElement("span");
     newExpensText.innerHTML = ` zł - ${document.querySelector('.newExpensText').value}`;
     newExpens.appendChild(newExpensText);
+    const x = document.createElement("span");
+    x.classList.add("delateElement");
+    x.innerHTML = ` x`;
+    newExpens.appendChild(x);
     document.querySelector('.newExpensText').value ="";
     }else{
         document.querySelector(".newExpens span").innerHTML = `  WPROWADŹ NAZWĘ!`;
     }
+})
+
+
+let listItems = document.querySelectorAll('.delateElement');
+
+// for (var i = 0; i < listItems.length; i++) {
+//     listItems[i].addEventListener("click", () => {console.log(this)})
+//   }
+
+
+//   listItems.forEach( (item, index) => {
+//         item.addEventListener("click", function(){
+//         // this.parentNode.removeChild(this);
+//         console.log(item.closest("p"))
+//     })})
+       
+
+listItems.forEach(item => { item.addEventListener("click", function(){
+    item.closest("p").parentNode.removeChild(item.closest("p"));
+    })
 })
