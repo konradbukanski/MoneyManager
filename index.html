@@ -54,6 +54,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
+            height: 75%;
             transform: translate(-50%,-50%);
             display: flex;
             justify-content:space-between;
@@ -63,6 +64,7 @@
             flex-direction: column;
             left: 10%;
             width: 80%;
+            height: autos;
             top:200px;
             transform: translateX(0);
             
@@ -184,14 +186,13 @@
   border-radius: 10px;
 }
 .delateElement{
-    display: none;
     color: red;
     cursor: pointer;
 }
 
-.expensesListText:hover + .delateElement, .delateElement:hover{
+/* .expensesListText:hover + .delateElement, .delateElement:hover{
     display: inline;
-}
+} */
     </style>
 </head>
 <body>
@@ -208,10 +209,10 @@
                     <h1>Ile miesięcznie wydajesz?</h1>
                 <div class="expensesList">
                 
-                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Czynsz</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
-                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Opłaty abonamentowe </span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
-                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Raty</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
-                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Jedzenie</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>   
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Czynsz</span><span class="delateElement"> X</span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Opłaty abonamentowe </span><span class="delateElement"> X</span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Raty</span><span class="delateElement"> X</span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Jedzenie</span><span class="delateElement"> X</span></p>   
             </div>             
             </div>
             <div class="newExpens">
