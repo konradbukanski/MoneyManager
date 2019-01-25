@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Money manager</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <style>
         .{
             margin: 0;
@@ -52,8 +53,8 @@
         .box{
             position: absolute;
             left: 50%;
-            top:150px;
-            transform: translateX(-50%);
+            top: 50%;
+            transform: translate(-50%,-50%);
             display: flex;
             justify-content:space-between;
         }
@@ -69,7 +70,7 @@
         }
         .inputs,.total{
             background-color: #202f50;
-            border-radius: 5px;
+            border-radius: 10px;
             z-index: 2;
         }
         .inputs{
@@ -183,9 +184,14 @@
   border-radius: 10px;
 }
 .delateElement{
+    display: none;
     color: red;
+    cursor: pointer;
 }
 
+.expensesListText:hover + .delateElement, .delateElement:hover{
+    display: inline;
+}
     </style>
 </head>
 <body>
@@ -202,10 +208,10 @@
                     <h1>Ile miesięcznie wydajesz?</h1>
                 <div class="expensesList">
                 
-                <p><input type="number" value="0" min="0"> <span> zł - Czynsz</span><span class="delateElement">x</span></p>
-                <p><input type="number" value="0" min="0"> <span> zł - Opłaty abonamentowe </span><span class="delateElement">x</span></p>
-                <p><input type="number" value="0" min="0"> <span> zł - Raty</span><span class="delateElement">x</span></p>
-                <p><input type="number" value="0" min="0"> <span> zł - Jedzenie</span><span class="delateElement">x</span></p>   
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Czynsz</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Opłaty abonamentowe </span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Raty</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>
+                <p><input type="number" value="0" min="0"> <span class="expensesListText"> zł - Jedzenie</span><span class="delateElement"><i class="fas fa-times-circle"></i></span></p>   
             </div>             
             </div>
             <div class="newExpens">

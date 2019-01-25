@@ -1,4 +1,5 @@
 let expenses =0 
+let listItems =  document.querySelectorAll('.delateElement');
 
 document.querySelector('.calculate').addEventListener("click", (e) => {
     e.preventDefault();
@@ -52,29 +53,19 @@ document.querySelector('.newExpensBtn').addEventListener("click", (e) => {
     x.innerHTML = ` x`;
     newExpens.appendChild(x);
     document.querySelector('.newExpensText').value ="";
-    listItemschange()
-
-
-    
-    }else{
+    listItemschange()  
+    }else
+    {
         document.querySelector(".newExpens span").innerHTML = `  WPROWADŹ NAZWĘ!`;
-    }
-    listItems = document.querySelectorAll('.delateElement');
-    
+    }    
 })
 
-
-
-let listItems =  document.querySelectorAll('.delateElement');
-
 const listItemschange = () => {
-
         listItems =  document.querySelectorAll('.delateElement');
-        document.querySelectorAll('.delateElement').forEach(item => { item.addEventListener("click", function(){
-            item.closest("p").parentNode.removeChild(item.closest("p"));
+        document.querySelectorAll('.delateElement').forEach(item => { item.addEventListener("click", function(e){
+            e.target.closest('p').remove();
             })
         })
-
 }
 listItemschange()
 
